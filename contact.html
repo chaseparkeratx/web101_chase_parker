@@ -7,51 +7,56 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./contact.css">
+  <!-- <link rel="stylesheet" href="./reset.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="./contact.js"></script>
   <title>Contact Me Page</title>
 </head>
-<body>
-  <div id="img">
+<header>
   <h1>Contact Me</h1>
-  <form action="" method="post" autocomplete="off">
-    <div id="N">
+</header>
+<body>
+  <form action="">
+    <div id="name">
         <label for="name">Name</label>
         <input type="text"
         name="name"
         id="name">
     </div>
-    <div id="eM">
+    <div id="email">
       <label for="email">Email</label>
       <input type="email" name="email"
       id="email">
     </div>
-    <div id="pN">
+    <div id="phone">
       <label for="phoneNumber">Phone Number</label>
       <input type="tel"
       name="tel"
       id="tel">
     </div>
-    <div class="C">
-    Comments?<textarea name="comments" id="" cols="50" rows="5"></textarea>
+    <div id="comments">Comments?<input id="comments" type="text">
     </div>
-    <h3 class="hear">How did you hear about me?</h3>
-    <ul class=checkbox><input type="checkbox"><a href="#" class="fa fa-linkedin"></a>LinkedIn</ul>
-    <ul class=checkbox><input type="checkbox"><a href="#" class="fa fa-instagram"></a>Instagram</ul>
-    <ul class=checkbox><input type="checkbox"><a href="#" class="fa fa-twitter"></a>Twitter</ul>
-    <ul class=checkbox><input type="checkbox"><a href="#" class="fa fa-facebook"></a>Facebook</ul>
-    <ul class="Other"><input type="text"></ul>
-    <h3 class="cB">Would you like to be contacted back?</h3>
-    <button onclick="">Yes</button>
-    <button onclick="">No</button>
-    <h3 class="bD"> <b>Would you like to receive a special wish on your birthday?</b>
+    <div class="checkboxGrid">
+      <h3 class="hear">How did you hear about me?</h3>
+      <ul class="checkbox">
+        <a href="#" class="fa fa-linkedin"></a>LinkedIn<input type="checkbox">
+        <a href="#" class="fa fa-instagram"></a>Instagram<input type="checkbox">
+        <a href="#" class="fa fa-twitter"></a>Twitter<input type="checkbox">
+        <a href="#" class="fa  fa-facebook"></a>Facebook<input type="checkbox">
+        <br>
+        <input type="checkbox">Classmate
+        <input type="checkbox">Resume Submission
+        <input type="checkbox">Coding Academy Rec
+        <input type="checkbox">Other<input type="text">
+      </ul>
+    </div>
+    <h3 class="contact">Would you like to be contacted back?</h3>
+    <button id="yes" onclick="userClick(this)">Yes</button>
+    <button class="no" onclick="userClick(this)">No</button>
+    <h3 class="birthday"> <b>Would you like to receive a special wish on your birthday?</b>
     <input type="date"></h3>
-    <input type="submit">
+    <input id="submit" type="submit" onclick="submitEvent(this)">
   </form>
-  </div>
 </body>
 </html>

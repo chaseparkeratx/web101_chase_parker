@@ -1,19 +1,25 @@
-@media (max-width: 600px) {
-  *body {
-    display: grid;
-  }
-  #img {
-    background-image: url(https://cdn2.vectorstock.com/i/1000x1000/75/61/background-design-with-color-pencils-vector-18047561.jpg);
-  }
-  body {
-  justify-content: center;
-  align-items: center;
-  font-family: 'Rowdies', cursive;
-  font-family: 'Ubuntu', sans-serif;
+/* @media (max-width: 600px) { */
+  header {
+    background-color: #007bb5;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    border: 5px outset rgb(98, 98, 99);
   }
   .h1 {
     font-family: 'Rowdies', cursive;
     font-family: 'Ubuntu', sans-serif;
+  }
+  body {
+    background-color: rgb(179, 179, 183);
+    font-family: 'Rowdies', cursive;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  body div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
   }
   h3 {
     display: flex;
@@ -44,20 +50,13 @@
     color: white;
   }
   }
-  .C {
-  display: flex;
-  align-items: center;
-  }
-  .hear {
-  display: flex;
-  align-items: center;
-  }
-  #sub {
+  div.checkboxGrid {
   display: grid;
-  width: fit-content;
-  font-size: 200%;
+  grid-template: auto;
+  justify-content: space-between;
+  /* align-items: center; */
   }
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   body {
     margin: auto;
     display: grid;
@@ -68,8 +67,6 @@
     background-color: aquamarine;
     font-family: 'Rowdies', cursive;
     font-family: 'Ubuntu', sans-serif;
-    background-repeat: none;
-    background-image: url(https://cdn2.vectorstock.com/i/1000x1000/75/61/background-design-with-color-pencils-vector-18047561.jpg);
     }
     h1 {
       font-family: 'Rowdies', cursive;
@@ -117,4 +114,4 @@
     width: fit-content;
     font-size: 200%;
     }
-}
+} /*
