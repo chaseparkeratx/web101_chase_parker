@@ -2,61 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./contact.css">
-  <!-- <link rel="stylesheet" href="./reset.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="./contact.js"></script>
-  <title>Contact Me Page</title>
+  <title>Contact Me</title>
 </head>
-<header>
-  <h1>Contact Me</h1>
-</header>
 <body>
-  <form action="">
-    <div id="name">
-        <label for="name">Name</label>
-        <input type="text"
-        name="name"
-        id="name">
+  <header>
+    <h1>Contact Me</h1>
+  </header>
+  <!-- <form action="contact-results.html" method="GET" enctype="multipart/form-data"> -->
+    <div class="formGroup">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" >
     </div>
-    <div id="email">
-      <label for="email">Email</label>
-      <input type="email" name="email"
-      id="email">
+    <div class="formGroup">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" name="phone" id="phone">
     </div>
-    <div id="phone">
-      <label for="phoneNumber">Phone Number</label>
-      <input type="tel"
-      name="tel"
-      id="tel">
+    <div class="formGroup">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" >
     </div>
-    <div id="comments">Comments?<input id="comments" type="text">
+    <div class="formGroup">
+      <label for="reference">How did you hear about me?</label>
     </div>
-    <div class="checkboxGrid">
-      <h3 class="hear">How did you hear about me?</h3>
-      <ul class="checkbox">
-        <a href="#" class="fa fa-linkedin"></a>LinkedIn<input type="checkbox">
-        <a href="#" class="fa fa-instagram"></a>Instagram<input type="checkbox">
-        <a href="#" class="fa fa-twitter"></a>Twitter<input type="checkbox">
-        <a href="#" class="fa  fa-facebook"></a>Facebook<input type="checkbox">
-        <br>
-        <input type="checkbox">Classmate
-        <input type="checkbox">Resume Submission
-        <input type="checkbox">Coding Academy Rec
-        <input type="checkbox">Other<input type="text">
-      </ul>
+    <div class="reference">
+      <input type="checkbox" name="reference" id="classmate">Classmate
+      <input type="checkbox" name="reference" id="linkedIn">LinkedIn
+      <input type="checkbox" name="reference" id="resume">Resume Submission
+      <input type="checkbox" name="reference" id="school">Coding Academy Rec
     </div>
-    <h3 class="contact">Would you like to be contacted back?</h3>
-    <button id="yes" onclick="userClick(this)">Yes</button>
-    <button class="no" onclick="userClick(this)">No</button>
-    <h3 class="birthday"> <b>Would you like to receive a special wish on your birthday?</b>
-    <input type="date"></h3>
-    <input id="submit" type="submit" onclick="submitEvent(this)">
-  </form>
+    <div id="contact" class="formGroup">
+      Would you like to be contacted back?
+      <input type="radio">Yes?
+      <input type="radio">No?
+    </div>
+    <div class="formGroup">
+      Would you like to receive a birthday wish?
+      <input id="bdayInput"type="date">
+    </div>
+    <div class="formGroup">
+      Comments?
+      <textarea name="comments" id="textArea" minlength="20" maxlength="500"></textarea>
+    </div>
+    <div class="formGroup">
+    <button id="submit" type="submit" onclick="submitForm()">Submit</button>
+    </div>
 </body>
 </html>
